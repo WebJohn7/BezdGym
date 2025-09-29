@@ -101,12 +101,13 @@ body {
   display: flex;
   align-items: flex-start;
   padding: 0 130px;
-  /*Gap: 130px;*/
 }
 
 .hero-content {
   flex: 1;
   max-width: 590px;
+  animation-name: slideUp;
+  animation-duration: 1.3s;
 }
 
 .hero-icon {
@@ -163,6 +164,8 @@ body {
   height: 394px;
   border-radius: 0px 100px 0px 100px;
   overflow: hidden;
+  animation-name: slideRight;
+  animation-duration: 1.3s;
 }
 
 .hero-image img {
@@ -625,5 +628,28 @@ body {
   }
   .supplements-section {
     padding: 24px 12px; /* menší padding na mobilu */
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100px);
+  }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(100px);
+  }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
